@@ -1,0 +1,38 @@
+import { GameObject } from "./game-object";
+export declare class GameScene {
+    canvasEl: HTMLCanvasElement;
+    private context;
+    private allowedContext;
+    private defaultFramesPerSec;
+    private ticksPerSec;
+    private canRender;
+    private stopped;
+    private collection;
+    private uicollection;
+    private clickListenerPool;
+    private moveListenerPool;
+    private rightClickListenerPool;
+    private nextUID;
+    private amount;
+    private renderGovernor;
+    private tickGovernor;
+    constructor(canvasEl: HTMLCanvasElement);
+    start(framesPerSec?: any): void;
+    stop(): void;
+    addObject(object: GameObject): void;
+    addUIElement(object: GameObject): void;
+    addUIElements(...objs: GameObject[]): void;
+    addObjects(...objs: GameObject[]): void;
+    clickOnObject(cbk: Function): void;
+    contextMenuOnObject(cbk: Function): void;
+    moveOver(cbk: Function): void;
+    private gameObjectInBounds(position);
+    private positionWithinObject(position, gameObject);
+    private performTicks();
+    private loop();
+    private renderGameObjects();
+    private renderObject(object);
+    private renderUIElements();
+    private clearCanvas();
+    private del(object);
+}

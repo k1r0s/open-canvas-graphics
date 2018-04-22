@@ -1,0 +1,22 @@
+{
+  "name": "ocg",
+  "version": "0.0.1",
+  "description": "Open Canvas Graphics",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/ocg.umd.js",
+  "module": "dist/ocg.es5.js",
+  "typings": "dist/types/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && rollup -c && rm -rf compiled"
+  },
+  "keywords": [],
+  "author": "k1r0s <ciroreed@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^0.58.1",
+    "typescript": "^2.6.2"
+  }
+}
